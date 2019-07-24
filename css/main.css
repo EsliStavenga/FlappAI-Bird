@@ -1,0 +1,13 @@
+.p5Canvas, #graph {
+    position: absolute;
+    top: 5px;
+}
+
+#graph {
+    left: 650px; /* I feel absolutely disgusted but it works */
+}
+
+.data {
+    position: absolute; 
+    top: 600px;
+}

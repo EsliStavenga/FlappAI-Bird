@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>FlappyBird, but automated</title>
+    <link rel="stylesheet" href="./css/graph.css">
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+
+    <div class="data">
+        <p> <b>PRO TIP: You can drag around the NN view.</b> Updating this graph takes quite a lot of resources so
+            you'll have to do it manually for the time being
+            <button onClick="showPlayerBrain();">UPDATE</button> <br />
+            Think your population is the best? Export it here. The JSON will be copied to your clipboard <button
+                onClick="copyToClipboard(exportGeneration());">Export</button> <br />
+            <button onclick="toggleDebug()">Toggle player's vision</button>
+
+        </p>
+        <p>Select a generation, or just start from scrap
+            <select onChange="loadGeneration(this);">
+                <option value="-1" selected disabled>--</option>
+                <option value="0">A pretty good population</option>
+                <option value="1">A pretty decent population</option>
+                <option value="2">At least they're trying</option>
+                <option value="3">Load none</option>
+            </select></p>
+        <p class="gen">Generation: 0</p>
+        <p class="avg">Average score: 0</p>
+        <p class="best">Best player score: 0</p>
+
+    </div>
+    <svg id="graph" width="600px" height="600px"></svg>
+
+    <!-- A true master -->
+    <script src="./populations/pop1.jsonp"></script>
+    <!-- IDK tbh -->
+    <script src="./populations/pop2.jsonp"></script>
+
+    <!-- Still has to learn -->
+    <script src="./populations/pop3.jsonp"></script>
+
+    <!-- Libraries needed for the graph -->
+    <script src="./js/lib/d3.js"></script>
+    <script src="./js/lib/cola.js"></script>
+    <script src="./js/lib/graph.js"></script>
+
+    <script src="./js/lib/p5.js"></script>
+    <script src="./js/lib/neataptic.js"></script>
+    <script src="./js/Vector2.js"></script>
+    <script src="./js/MathExtensions.js"></script>
+    <script src="./js/GameObject.js"> </script>
+    <script src="./js/PipePair.js"> </script>
+    <script src="./js/Pipe.js"> </script>
+    <script src="./js/Player.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
